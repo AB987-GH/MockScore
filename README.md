@@ -15,10 +15,15 @@ The app currently does not provide a way to send ballots to judges. I recommend 
 This project has been private/in-development for about three months now.
 Timeline:
 Project Started: 4/13/2025
+
 First Version Complte: 4/15/2025
+
 Individual Awards Functionality Implemented: 5/3/2025
+
 Round-Input Functionality Implemented (so tournaments aren't just always 4 rounds): 5/15/2025
+
 Power Matching Implemented: 7/9/2025
+
 Power Matching Improved & Project Published: 7/16/2025
 
 
