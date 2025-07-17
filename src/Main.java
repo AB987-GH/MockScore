@@ -188,7 +188,12 @@ public class Main {
                             a.getValue().getOrDefault(RoleType.ATTORNEY, 0)))
                     .limit(numAwards)
                     .forEachOrdered(entry -> {
-                        String team = finalTeams1.stream().filter(t -> t.students.contains(entry.getKey())).map(t -> t.id).findFirst().orElse("Unknown");
+                        String team = finalTeams1.stream()
+                                .filter(t -> t.students != null && t.students.contains(entry.getKey()))
+                                .map(t -> t.id)
+                                .findFirst()
+                                .orElse("Unknown");
+
                         int rank = finalNominationTracker1.getAll().entrySet().stream()
                                 .filter(e -> e.getValue().containsKey(RoleType.ATTORNEY))
                                 .sorted((a, b) -> Integer.compare(
@@ -210,7 +215,12 @@ public class Main {
                             a.getValue().getOrDefault(RoleType.WITNESS, 0)))
                     .limit(numAwards)
                     .forEachOrdered(entry -> {
-                        String team = finalTeams.stream().filter(t -> t.students.contains(entry.getKey())).map(t -> t.id).findFirst().orElse("Unknown");
+                        String team = finalTeams.stream()
+                                .filter(t -> t.students != null && t.students.contains(entry.getKey()))
+                                .map(t -> t.id)
+                                .findFirst()
+                                .orElse("Unknown");
+
                         int rank = finalNominationTracker.getAll().entrySet().stream()
                                 .filter(e -> e.getValue().containsKey(RoleType.WITNESS))
                                 .sorted((a, b) -> Integer.compare(
@@ -237,7 +247,12 @@ public class Main {
 
         for (int i = 0; i < sorted.size(); i++) {
             String name = sorted.get(i).getKey();
-            String team = teams.stream().filter(t -> t.students.contains(name)).map(t -> t.id).findFirst().orElse("Unknown");
+            String team = teams.stream()
+                    .filter(t -> t.students != null && t.students.contains(name))
+                    .map(t -> t.id)
+                    .findFirst()
+                    .orElse("Unknown");
+
             writer.write((i + 1) + ". " + name + " (" + team + ") - " + tracker.getPoints(name, roleType) + " pts\n");
         }
     }
@@ -253,7 +268,12 @@ public class Main {
 
         for (int i = 0; i < sorted.size(); i++) {
             String name = sorted.get(i).getKey();
-            String team = teams.stream().filter(t -> t.students.contains(name)).map(t -> t.id).findFirst().orElse("Unknown");
+            String team = teams.stream()
+                    .filter(t -> t.students != null && t.students.contains(name))
+                    .map(t -> t.id)
+                    .findFirst()
+                    .orElse("Unknown");
+
             System.out.println((i + 1) + ". " + name + " (" + team + ") - " + tracker.getPoints(name, roleType) + " pts");
         }
     }

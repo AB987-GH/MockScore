@@ -6,7 +6,7 @@ public class AdminInputHandler {
     private final Scanner scanner = new Scanner(System.in);
 
     public Team inputTeam() {
-        System.out.print("Enter Team ID/Name");
+        System.out.print("Enter Team ID/Name: ");
         String id = scanner.nextLine();
 
         System.out.println("\nEntering Plaintiff Side Roster");
@@ -16,11 +16,12 @@ public class AdminInputHandler {
         Roster defenseRoster = inputRoster(TrialSide.DEFENSE);
 
         Team team = new Team();
+        team.students = new ArrayList<>();
         team.id = id;
         team.plaintiffRoster = plaintiffRoster;
         team.defenseRoster = defenseRoster;
 
-        System.out.println("✅ model.Team " + id + " added successfully!\n");
+        System.out.println("✅ " + id + " added successfully!\n");
         return team;
     }
 
@@ -37,19 +38,23 @@ public class AdminInputHandler {
 
             RoleType roleType = promptForRoleType();
 
+            // Create new student with name and role
+            Student student = new Student(name, roleType);
+
             RoleAssignment assignment = new RoleAssignment();
-            assignment.studentName = name;
-            assignment.role = roleType;
-            assignment.side = side;
+            assignment.setStudent(student);
+            assignment.setRole(roleType);
+            assignment.setSide(side);
 
             if (roleType == RoleType.WITNESS) {
-                roster.witnesses.add(assignment);
+                roster.getWitnesses().add(assignment);
             } else {
-                roster.attorneys.add(assignment);
+                roster.getAttorneys().add(assignment);
             }
 
-            System.out.println("Added: " + name + " as " + roleType + " on " + side + " side.");
+            System.out.println("Added: " + student.getName() + " as " + roleType + " on " + side + " side.");
         }
+
 
         return roster;
     }

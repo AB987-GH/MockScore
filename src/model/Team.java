@@ -15,5 +15,5 @@ public class Team {
 
     public int plaintiffCount = 0; // number of times team has been Plaintiff thus far
     public int defenseCount = 0; // number of times team has been Defense thus far
-    public List<String> students = new ArrayList<>();
+    public List<Student> students = new ArrayList<>();
 }
