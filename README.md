@@ -1,4 +1,4 @@
-MockScore is a free, open-source passion project I developed to make a simple and straightforward way to utilize powerful tabulation for Mock Trial, whether it be for junior high, high school, collegiate, or law school Mock Trial.
+MockScore is a free, open-source passion project I developed to make a simple and straightforward way to utilize powerful tabulation for Mock Trial, whether it be for junior high, high school, collegiate, or law school Mock Trial. It's designed to be heavily adaptable to whatever your individual tournament or "jurisdiction" might require or need!
 
 How to use:
 1) Admin inputs team rosters for each side, number of rounds tournament will have, number of awards available, and number of judges in each trial
