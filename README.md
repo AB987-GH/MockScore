@@ -22,7 +22,9 @@ MockScore can also save tournament results, both as csv and txt files. The bug w
 
 
 This project has been private/in-development for about three months now.
+
 Timeline:
+
 Project Started: 4/13/2025
 
 First Version Complte: 4/15/2025
