@@ -15,6 +15,12 @@ Teams will be ranked primarily by their ballot wins. Ties in wins will be broken
 
 The app currently does not provide a way to send ballots to judges. I recommend using another tool (like Google Forms) to collect your ballots, as this also offers greater customization in what your scoring categories & metrics are (scoring 1-5 vs 1-10, if you want other categories to be scored such as extemporization, etc.)
 
+MockScore can also save tournament results, both as csv and txt files. The bug with team name will be fixed soon.
+<img width="339" height="154" alt="image" src="https://github.com/user-attachments/assets/99b79ea9-d0ad-4097-8cd0-93514a8cde4e" /> 
+<img width="401" height="246" alt="image" src="https://github.com/user-attachments/assets/dc5ad4ee-fedf-4a4f-b398-9c37d8570e55" />
+
+
+
 This project has been private/in-development for about three months now.
 Timeline:
 Project Started: 4/13/2025
@@ -34,4 +40,4 @@ Power Matching Improved & Project Published: 7/16/2025
 TO-DO:
 - Make actual graphics/UI (might not happen)
 - Optimize algorithm for power matching
-- Eventually implement an all-in-one solution for judges to receive and submit ballots within the app (likely going to happen but not for a long time)
+- Eventually implement an all-in-one solution for judges to receive and submit ballots within the app (likely going to happen but not for a while)
